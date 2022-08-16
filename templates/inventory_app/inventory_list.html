@@ -1,0 +1,11 @@
+<ul>
+    {% for object in object_list %}
+        <li>Name: <a href="inventory/{{ object.id }}">{{ object.name }}</a> </li>
+        <li>Availability: {{ object.availability }}</li>
+        <li>Supplier: {{ object.supplier.name }}</li>
+
+        <hr/>
+        {% empty %}
+        <li>No objects yet.</li>
+    {% endfor %}
+</ul>
